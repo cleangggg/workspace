@@ -1,0 +1,24 @@
+package str;
+
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		int num = 1111;
+		String st =Integer.toString(num);
+		System.out.println(st);
+		
+		int n = Integer.parseInt(st);
+		System.out.println(n+ num);
+		
+		String st02 = "";
+		st02 += "a";
+		st02 += "b";
+		st02 += (char)('c' - 32);
+		System.out.println(st02);
+		
+		
+		
+		
+	}
+}

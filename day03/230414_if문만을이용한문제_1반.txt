@@ -1,0 +1,155 @@
+1번.
+국어점수 입력:
+80
+국어점수 입력:
+60
+국어점수 입력:
+40
+
+1.국어점수 2.수학점수 3.영어점수출력
+1
+1.국어80
+
+2
+2.영어60
+
+3
+3.수학40
+
+4
+에러
+
+이렇게 나오도록 하시오 .
+
+
+
+2번.짱구 친구들이 돌아가면서 학교를 청소합니다. 
+1일에는 짱구가, 2일에는 유리가, 3일에는 철수가, 4일에는 맹구가, 5일에는 훈이가, 6일에는
+다시 짱구로 돌아가는 청소 시스템이라면 사용자가 입력한 날짜에는 누가 청소를 하는지 구하세요.
+ (단, 4월기준으로 30일이 넘어간다면 오류처리하시오.)
+
+
+
+
+
+3번
+시험성적 출력
+- 세 과목의 시험 성적 입력 받은 후 평균 점수가 80점 이상일시 합격 출력
+
+이름: 홍길동
+국어 점수: 80
+수학 점수: 80
+영어 점수: 80
+합계: 240
+평균: 80.0
+합격여부: 합격
+
+
+
+
+
+
+
+
+
+
+1번답
+
+
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("국어점수 입력:");
+		int kor = input.nextInt();
+		System.out.println("국어점수 입력:");
+		int eng = input.nextInt();
+		System.out.println("국어점수 입력:");
+		int math = input.nextInt();
+		
+	
+	
+		
+		System.out.println("1.국어점수 2.수학점수 3.영어점수출력");
+		int a= 0;
+		a = input.nextInt();	
+		if (a ==1 ) {
+			System.out.println("1.국어"+kor);
+		}
+		if (a ==2) {
+			System.out.println("2.영어"+eng);
+		}
+		if (a ==3 ) {
+			System.out.println("3.수학"+math);
+		}
+		if (a<=0 || a >3) {
+			System.out.println("에러");
+		}
+		
+2번답
+public class Ex03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int day;
+		System.out.print("오늘은 4월 며칠입니까?(숫자만 기입) ");
+		day = sc.nextInt();
+		if (day%5==1) {
+			System.out.println(day + "일은 짱구가 청소하는 날입니다.");
+		}
+		if (day%5==2) {
+			System.out.println(day + "일은 유리가 청소하는 날입니다.");
+		}
+		if (day%5==3) {
+			System.out.println(day + "일은 철수가 청소하는 날입니다.");
+		}
+		if (day%5==4) {
+			System.out.println(day + "일은 맹구가 청소하는 날입니다.");
+		}
+		if (day%5==0) {
+			System.out.println(day + "일은 훈이가 청소하는 날입니다.");
+		}
+		if (day>30) {
+			System.out.println("잘못입력하셨습니다 다시 실행해주세요");
+		}
+
+3번답
+
+
+package if_else;
+
+import java.util.Scanner;
+
+public class Test01 {
+public static void main(String[] args) {
+	Scanner input = new Scanner (System.in);
+	String name, pass = null;
+	int kor, math, eng, sum;
+	float avg;
+	
+	System.out.print("이름: ");
+	name= input.next();
+	
+	System.out.print("국어 점수: ");
+	kor = input.nextInt();
+	
+	System.out.print("수학 점수: ");
+	math = input.nextInt();
+	
+	System.out.print("영어 점수: ");
+	eng = input.nextInt();
+	
+	sum = kor+math+eng;
+	System.out.println("합계: "+sum);
+	
+	avg = sum / 3.0f;
+	System.out.println("평균: "+avg);
+	
+	if (avg/10>=8)
+		pass = "합격";
+	if (avg/10<8)
+		pass = "불합격";
+
+	
+	System.out.println("합격여부: " + pass);
+}
+}

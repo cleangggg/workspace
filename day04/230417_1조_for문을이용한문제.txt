@@ -1,0 +1,84 @@
+문제1 번
+| for 반복문 |
+어느 홈페이지에서 1초 단위로 20원을 벌 수 있는 홈페이지가 있다. 단 10초 단위마다 한 텀 쉬어간다고 한다면 1분에는 얼마를 벌 수 있는가
+
+문제 2번 
+단수를 입력하면 해당하는 단의 구구단을 출력해주는 프로그램 만들기
+
+예시
+
+===== 구구단 =====
+단수 입력: 5
+5*1=5
+5*2=10
+5*3=15
+5*4=20
+5*5=25
+5*6=30
+5*7=35
+5*8=40
+5*9=45
+
+
+문제 3번
+
+출력결과를 쓰시오 
+
+public static void main(String[] args) {
+
+int a = 0;
+int i;
+for (i =3 ; i<100; i*=3) {
+	a *= i ;
+}
+System.out.println(a);
+
+//System.out.println(i); (시간나면 이문제도 풀어보세요)
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+1번 정답 :
+
+int k = 20;
+		int sumK = 0;
+		for (int i=1; i<=60; i++) {
+			if (i%10==0) {
+				sumK = sumK;
+			} else {
+				sumK += k;
+			}
+		}
+		System.out.println(sumK);
+
+2번 정답
+
+
+public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	int num =0, num2=0;
+	System.out.println("===== 구구단 =====");
+	
+	System.out.print("단수 입력: ");
+	num = input.nextInt();
+	
+	for(int i=num;i<=num;i++) {
+		for(int j=1;j<=9;j++) {
+			num2 = i*j;
+			System.out.println(i+"*"+j+"="+num2);
+		}
+	}
+3번정답
+0
+(243)

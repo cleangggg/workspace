@@ -1,0 +1,193 @@
+1번
+출력 결과를 쓰시오
+
+	public static void main(String[] args) {
+
+		int k = 1;
+		for (int i = 1; i < 6; i++) {
+			// System.out.println(i+"번째 값은:"+k);
+			System.out.println(k);
+			switch (i) {
+			case 1:
+				k++;
+				break;
+			case 2:
+				--k;
+				break;
+			case 3:
+				k *= 3;
+			case 4:
+				k -= 10;
+				continue;
+
+			}
+
+		}
+
+	}
+	
+문제2번
+문제. 카페 메뉴를 추가하고 메뉴판을 보는 시스템이다. 다음과 같은 결과 값을 보여주세요.
+
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 2
+메뉴부터 추가해주세요.
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 1
+어떤 메뉴를 추가 하시겠습니까?
+>>> 아메리카노
+추가되셨습니다
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 1
+어떤 메뉴를 추가 하시겠습니까?
+>>> 카페라떼
+추가되셨습니다
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 1
+어떤 메뉴를 추가 하시겠습니까?
+>>> 핫초코
+추가되셨습니다
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 2
+아메리카노
+카페라떼
+핫초코
+----------
+카페 메뉴
+1. 메뉴 추가
+2. 메뉴판 보기
+3. 종료
+----------
+>>> 3
+사용해 주셔서 감사합니다
+
+3번문제
+
+가로와 세로의 길이를 입력 받고 해당하는 수 만큼 사각형으로 별 출력
+
+예시
+
+가로 길이 입력: 5
+세로 길이 입력: 3
+
+*****
+*****
+*****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1번답 
+1
+2
+1
+-7
+-17
+
+
+2번답
+
+Scanner sc = new Scanner(System.in);
+		int a;
+		String str = null;
+		String menu ="";
+		while (true) {
+			System.out.println("----------");
+			System.out.println("카페 메뉴");
+			System.out.println("1. 메뉴 추가");
+			System.out.println("2. 메뉴판 보기");
+			System.out.println("3. 종료");
+			System.out.println("----------");
+			System.out.print(">>> ");
+			a = sc.nextInt();
+			if (a == 1) {
+				if (menu != "") { menu += "\n"; }
+				System.out.println("어떤 메뉴를 추가 하시겠습니까?");
+				System.out.print(">>> ");
+				str = sc.next();
+				menu += str;
+				System.out.println("추가되셨습니다");
+			} else if (a == 2) {
+				if (str == null) {
+					System.out.println("메뉴부터 추가해주세요.");
+					continue;
+				}
+				System.out.println(menu);
+			} else if (a == 3) {
+				System.out.println("사용해 주셔서 감사합니다");
+				break;
+			} else { System.out.println("다시 입력해주세요"); }
+		}
+
+
+3번답
+
+public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	
+	int num1 , num2;
+	
+	System.out.print("가로 길이 입력: ");
+	num1 = input.nextInt();
+	System.out.print("세로 길이 입력: ");
+	num2 = input.nextInt();
+	System.out.println();
+	
+	for(int i = 1; i<=num2; i++) {
+		for(int j=1; j<=num1; j++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+	
+}
